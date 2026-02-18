@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Leaderboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+
+<body class="leaderboard-page">
+
+    <header class="navbar">
+        <div class="logo">🏆 Quiz Leaderboard</div>
+        <div>
+            <button onclick="goHome()">🏠 Home</button>
+        </div>
+    </header>
+
+    <div class="leaderboard-container">
+
+        <div class="leaderboard-controls">
+            <select id="subjectFilter" onchange="filterLeaderboard()">
+                <option value="All">All Subjects</option>
+                <option value="english">📘 English</option>
+                <option value="maths">📐 Maths</option>
+                <option value="hindi">📗 Hindi</option>
+                <option value="science">🧪 Science</option>
+                <option value="social">🌍 Social Science</option>
+                <option value="sanskrit">🕉️ Sanskrit</option>
+            </select>
+        </div>
+
+        <div id="leaderboardList" class="leaderboard-list"></div>
+
+    </div>
+
+    <script src="leaderboard.js"></script>
+
+</body>
+
+</html>

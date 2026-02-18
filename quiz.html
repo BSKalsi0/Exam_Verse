@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Arena</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="quiz-page">
+
+    <header class="navbar">
+        <div class="logo">🎮 Quiz Arena</div>
+        <div class="nav-buttons">
+            <button onclick="goToLeaderboard()">🏆 Score</button>
+            <button onclick="goHome()">🏠 Home</button>
+        </div>
+    </header>
+
+    <div class="quiz-container">
+
+        <div class="quiz-header">
+            <div id="playerInfo"></div>
+            <div id="scoreDisplay">Score: 0</div>
+        </div>
+
+        <div class="quiz-card">
+            <h2 id="question"></h2>
+            <div id="options" class="options-box"></div>
+        </div>
+
+        <div class="quiz-actions">
+            <button onclick="nextQuestion()" class="next-btn">Next ➡</button>
+        </div>
+
+        <div id="result" class="result-box"></div>
+
+        <div class="restart-box">
+            <button onclick="restartQuiz()" class="restart-btn">🔄 Start Quiz Again</button>
+        </div>
+
+    </div>
+
+    <!-- 🔥 GEN-Z ATTEMPT MODAL -->
+    <div id="attemptModal" class="attempt-modal">
+        <div class="attempt-card">
+            <h3>⚠ Important Notice</h3>
+
+            <p>
+                You have only <b>2 attempts</b> to play this quiz.<br><br> ⚠ Aap sirf <b>2 baar</b> hi quiz play kar sakte ho.
+            </p>
+
+            <button onclick="closeAttemptModal()" class="attempt-btn">
+            Samajh Gya Bhai 😎
+        </button>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>
